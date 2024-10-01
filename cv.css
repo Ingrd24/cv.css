@@ -1,40 +1,62 @@
-/* styles.css */
-
-/* Diseño General y Layout */
+/* Estilos Generales */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    color: #333;
 }
 
 header {
-    background: #0077cc;
+    background-color: #0077cc;
     color: #fff;
     padding: 20px;
-    text-align: center;
-}
-
-section {
     display: flex;
-    flex-direction: column;
-    margin: 20px;
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    align-items: center;
 }
 
-h1, h2 {
-    font-family: 'Georgia', serif;
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
 }
 
 h1 {
+    font-family: 'Georgia', serif;
     font-size: 2.5em;
+    margin: 0;
 }
 
 h2 {
+    font-family: 'Georgia', serif;
     font-size: 1.8em;
+    color: #333;
+}
+
+section {
+    background-color: #fff;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Diseño y Layout Responsivo */
+@media (min-width: 768px) {
+    section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .profile {
+        flex-direction: row;
+    }
 }
 
 ul {
@@ -43,28 +65,36 @@ ul {
 }
 
 li {
-    padding: 5px 0;
+    margin-bottom: 10px;
 }
 
-/* Estilos para el footer */
+/* Enlace del footer */
 footer {
     text-align: center;
-    padding: 10px;
-    background: #0077cc;
-    color: white;
+    background-color: #0077cc;
+    color: #fff;
+    padding: 10px 0;
 }
 
 footer a {
     color: yellow;
     text-decoration: none;
+    font-weight: bold;
 }
 
 footer a:hover {
     text-decoration: underline;
 }
 
-/* Imagen de perfil */
-.profile-image {
-    width: 150px; /* Ajusta el tamaño según necesites */
-    border-radius: 50%;
+/* Paleta de Colores Consistente */
+p, li {
+    color: #333;
+}
+
+/* Estilización para el diseño en bloque */
+ul li::before {
+    content: "•";
+    color: #0077cc;
+    padding-right: 10px;
+    font-size: 1.2em;
 }
